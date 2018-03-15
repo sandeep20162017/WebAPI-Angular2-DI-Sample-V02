@@ -1,0 +1,89 @@
+﻿<html ng-app="studentapp">
+@{
+    ViewBag.Title = "ASP.NET5";
+}
+<head>
+
+
+</head>
+
+<body ng-controller="studentController">
+
+    <table width="99%" style=" border-bottom:3px solid #3273d5;">
+        <tr>
+
+            <td width="190">
+                <table width="99%">
+                    <tr>
+                        <td>
+                            Welcome Mr. {{'SHANU'}}
+
+                        </td>
+
+
+                    </tr>
+                </table>
+            </td>
+            <td class="style1" align="center">
+                <h3>Shanu - ASP.NET Core 1.0 MVC 6 with WEB API and AngularJS :)</h3>
+
+
+            </td>
+            
+        </tr>
+    </table>
+
+    <table style="width: 99%; background-color:#FFFFFF; border solid 2px #6D7B8D; padding 5px;width 99%;table-layout:fixed;" cellpadding="2" cellspacing="2">
+
+        <tr style="height: 30px; background-color:#336699 ; color:#FFFFFF ;border: solid 1px #659EC7;">
+            <td width="40" align="center"><b>Student ID</b></td>
+            <td width="100" align="center"><b>Student Name </b></td>
+            <td width="120" align="center"><b>Email</b></td>
+            <td width="120" align="center"><b>Phone</b></td>
+            <td width="120" align="center"><b>Address</b></td>
+
+        </tr>
+        <tbody data-ng-repeat="details in student">
+            <tr>
+
+                <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                    <span style="color:#9F000F">
+                        {{details.StdID}}
+                    </span>
+                </td>             
+
+                <td align="center" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                    <span style="color:#9F000F">
+                        {{details.StdName}}
+                    </span>
+                </td>
+
+                <td valign="top" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                    <span style="color:#9F000F">
+                        {{details.Email}}
+                    </span>
+                </td>
+
+                <td valign="top" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                    <span style="color:#9F000F">
+                        {{details.Phone}}
+                    </span>
+                </td>
+                <td valign="top" style="border: solid 1px #659EC7; padding: 5px;table-layout:fixed;">
+                    <span style="color:#9F000F">
+                        {{details.Address}}
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+</html>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-resource.js"></script>
+<script src="~/app.js"></script>
+
